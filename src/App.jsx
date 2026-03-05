@@ -292,7 +292,7 @@ export default function App() {
       </section>
 
       {/* VIDEO EMBED */}
-      <div className="w-full bg-black py-24 px-4 animate-fadeIn flex justify-center">
+      {/* <div className="w-full bg-black py-24 px-4 animate-fadeIn flex justify-center">
         <div className="max-w-[1180px] w-full">
           <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden shadow-2xl border border-white/5">
             <iframe 
@@ -305,7 +305,7 @@ export default function App() {
             ></iframe>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* BLOOMBERG TERMINAL */}
       <section className="w-full bg-black py-24 px-4 animate-fadeInDown flex justify-center text-center">
