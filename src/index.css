@@ -1,0 +1,90 @@
+@import "tailwindcss";
+/* Import Swiper CSS */
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+@theme {
+  --color-brand-blue: #2A62FF;
+  --color-brand-dark: #1e1e1e;
+}
+
+html, body {
+  background-color: #000 !important;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Neue Montreal", "Inter", sans-serif;
+}
+
+.gradient-text {
+  @apply bg-linear-to-r from-[#2A62FF] via-[#ACC2FF] to-white bg-clip-text text-transparent;
+}
+
+/* Master Button Style */
+.brand-button, .testimonial-button, .pricing-button, .history-button, .calculator-button {
+  @apply text-white font-normal py-3.5 px-10 rounded-xl transition-transform hover:scale-105 inline-flex items-center justify-center gap-3 text-[18px] md:text-[20px] border-none outline-none cursor-pointer shadow-lg;
+  background-image: linear-gradient(316deg, #FFFFFF 0%, #2A62FF 24%);
+  box-shadow: 0px 0px 9px 3px rgba(255, 255, 255, 0.37) inset;
+}
+
+/* Pagination Swiper */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 30px !important;
+  bottom: 0 !important;
+}
+.swiper-pagination-bullet {
+  background: #444444 !important;
+  opacity: 1 !important;
+  width: 6px !important;
+  height: 6px !important;
+}
+.swiper-pagination-bullet-active {
+  background: #2A62FF !important;
+}
+
+/* Stat Card Fade Effect */
+.fade-sides {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate3d(0, 40px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translate3d(-100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translate3d(0, -100%, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+.animate-fadeInUp { animation: fadeInUp 1.25s ease-out both; }
+.animate-fadeInLeft { animation: fadeInLeft 1.25s ease-out both; }
+.animate-fadeInDown { animation: fadeInDown 1.25s ease-out both; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.accordion-content.open { grid-template-rows: 1fr; }
+.accordion-inner { overflow: hidden; }
+
+/* Offline Meetup Background */
+.meetup-container {
+  background-image: url("https://tradewithsuli.com/wp-content/uploads/2025/11/meetup-member-1.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
