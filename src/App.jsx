@@ -220,7 +220,7 @@ export default function App() {
       </section>
 
       {/* OFFLINE MEET UP */}
-      <section className="w-full mt-16 meetup-container pt-12 pb-14 px-4 animate-fadeIn flex justify-center bg-black">
+      <section className="w-full mt-16 meetup-container pt-64 pb-80 px-4 animate-fadeIn flex justify-center bg-black">
         <div className="max-w-[1180px] w-full text-center">
           <div className="flex flex-col items-center gap-4">
             <h2 className="text-[28px] md:text-[48px] font-normal leading-[1.12] text-white text-center"><b><span className="gradient-text">Offline Meet Up</span> </b> <br/>Bareng Member Lain</h2>

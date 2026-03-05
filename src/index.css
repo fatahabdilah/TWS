@@ -86,5 +86,5 @@ html, body {
   background-image: url("https://tradewithsuli.com/wp-content/uploads/2025/11/meetup-member-1.webp");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
