@@ -69,6 +69,17 @@ export default function App() {
   const [openFAQIndex, setOpenFAQIndex] = useState(0);
 
   useEffect(() => {
+    document.title = "Trade With Suli";
+
+    // Ganti favicon dengan file JPG
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.head.appendChild(link);
+    }
+    link.href = '/favicon.jpg'; // Pastikan file favicon.jpg ada di folder public
+
     const handleScroll = () => setScrolled(window.scrollY > 150);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
